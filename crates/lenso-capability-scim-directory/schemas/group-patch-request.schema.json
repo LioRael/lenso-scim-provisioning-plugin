@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["organization_id", "resource_id", "expected_version", "idempotency_key"],
+  "properties": {
+    "organization_id": {"type": "string", "minLength": 1, "maxLength": 256},
+    "resource_id": {"type": "string", "minLength": 1, "maxLength": 256},
+    "expected_version": {"type": "string", "pattern": "^[1-9][0-9]*$"},
+    "external_id": {"type": "string", "maxLength": 512},
+    "display_name": {"type": "string", "minLength": 1, "maxLength": 512},
+    "role_id": {"type": "string", "minLength": 1, "maxLength": 256},
+    "members_add": {"type": "array", "maxItems": 10000, "uniqueItems": true, "items": {"type": "string", "maxLength": 256}},
+    "members_remove": {"type": "array", "maxItems": 10000, "uniqueItems": true, "items": {"type": "string", "maxLength": 256}},
+    "remove_external_id": {"type": "boolean"},
+    "remove_role": {"type": "boolean"},
+    "idempotency_key": {"type": "string", "minLength": 1, "maxLength": 256}
+  },
+  "additionalProperties": false
+}

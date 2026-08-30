@@ -1,0 +1,52 @@
+[package]
+name = "lenso-scim-provisioning-postgres-plugin"
+version = "0.1.0"
+description = "PostgreSQL-backed SCIM provisioning and HTTP endpoint Plugin for Lenso."
+edition.workspace = true
+license.workspace = true
+publish = true
+repository.workspace = true
+rust-version.workspace = true
+include = [
+  "configuration.schema.json",
+  "migrations/*.sql",
+  "src/*.rs",
+]
+
+[package.metadata.lenso]
+plugin-id = "lenso.scim-provisioning.postgres"
+root-slot = "scim"
+
+[features]
+default = []
+postgres-acceptance = []
+
+[dependencies]
+futures.workspace = true
+lenso.workspace = true
+lenso-auth-sdk.workspace = true
+lenso-capability-access-control-admin.workspace = true
+lenso-capability-access-control-directory.workspace = true
+lenso-capability-auth.workspace = true
+lenso-capability-http-endpoint.workspace = true
+lenso-capability-identity-directory.workspace = true
+lenso-capability-organization-membership-admin.workspace = true
+lenso-capability-scim-directory = { version = "0.1.0", path = "../lenso-capability-scim-directory" }
+lenso-capability-secrets.workspace = true
+lenso-kernel.workspace = true
+lenso-postgres-kit.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+sqlx.workspace = true
+thiserror.workspace = true
+time.workspace = true
+uuid.workspace = true
+url.workspace = true
+zeroize.workspace = true
+
+[dev-dependencies]
+tokio.workspace = true
+
+[lints]
+workspace = true

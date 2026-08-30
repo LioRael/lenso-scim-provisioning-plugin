@@ -1,0 +1,35 @@
+[package]
+name = "lenso-capability-scim-directory"
+version = "0.1.0"
+description = "Portable SCIM Directory Capability contract for Lenso applications."
+edition.workspace = true
+license.workspace = true
+publish = true
+repository.workspace = true
+rust-version.workspace = true
+build = "build.rs"
+include = [
+  "build.rs",
+  "capability.json",
+  "schemas/*.json",
+  "src/*.rs",
+]
+
+[package.metadata.lenso.contract]
+descriptor = "capability.json"
+projection = "rust"
+output = "src/generated.rs"
+
+[dependencies]
+futures.workspace = true
+lenso-contract-runtime.workspace = true
+lenso-kernel.workspace = true
+lenso-plugin-authoring.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+
+[build-dependencies]
+lenso-contract-codegen.workspace = true
+
+[lints]
+workspace = true

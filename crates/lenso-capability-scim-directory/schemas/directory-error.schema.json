@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","oneOf":[{"const":"unauthorized"},{"const":"invalid_request"},{"const":"not_found"},{"const":"conflict"},{"const":"precondition_failed"},{"const":"downstream_rejected"}]}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "database_url_secret",
+    "organization_id",
+    "identity_provider",
+    "directory_callers",
+    "repair_callers",
+    "http_callers",
+    "accepted_actor_kinds",
+    "required_organization_claim",
+    "max_page_size",
+    "max_group_members"
+  ],
+  "properties": {
+    "schema": {"type": "string", "minLength": 1, "maxLength": 63},
+    "database_url_secret": {"type": "string", "minLength": 1, "maxLength": 256},
+    "organization_id": {"type": "string", "minLength": 1, "maxLength": 256},
+    "identity_provider": {"type": "string", "minLength": 1, "maxLength": 128},
+    "directory_callers": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1, "maxLength": 256}},
+    "repair_callers": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1, "maxLength": 256}},
+    "http_callers": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1, "maxLength": 256}},
+    "accepted_actor_kinds": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["service_account"]}},
+    "required_organization_claim": {"type": "string", "const": "organization_id"},
+    "max_page_size": {"type": "integer", "minimum": 1, "maximum": 200},
+    "max_group_members": {"type": "integer", "minimum": 1, "maximum": 10000}
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "lenso.scim-directory@1",
+  "version": "1.0.0",
+  "portable": true,
+  "cross_lane_transfer": true,
+  "operations": [
+    {"name":"create_user","interaction":"request","request_schema":"schemas/user-write-request.schema.json","response_schema":"schemas/user-response.schema.json","domain_error_schema":"schemas/directory-error.schema.json"},
+    {"name":"get_user","interaction":"request","request_schema":"schemas/resource-request.schema.json","response_schema":"schemas/user-response.schema.json","domain_error_schema":"schemas/directory-error.schema.json"},
+    {"name":"list_users","interaction":"request","request_schema":"schemas/list-request.schema.json","response_schema":"schemas/user-list-response.schema.json","domain_error_schema":"schemas/directory-error.schema.json"},
+    {"name":"replace_user","interaction":"request","request_schema":"schemas/user-write-request.schema.json","response_schema":"schemas/user-response.schema.json","domain_error_schema":"schemas/directory-error.schema.json"},
+    {"name":"patch_user","interaction":"request","request_schema":"schemas/user-patch-request.schema.json","response_schema":"schemas/user-response.schema.json","domain_error_schema":"schemas/directory-error.schema.json"},
+    {"name":"delete_user","interaction":"request","request_schema":"schemas/delete-request.schema.json","response_schema":"schemas/mutation-response.schema.json","domain_error_schema":"schemas/directory-error.schema.json"},
+    {"name":"create_group","interaction":"request","request_schema":"schemas/group-write-request.schema.json","response_schema":"schemas/group-response.schema.json","domain_error_schema":"schemas/directory-error.schema.json"},
+    {"name":"get_group","interaction":"request","request_schema":"schemas/resource-request.schema.json","response_schema":"schemas/group-response.schema.json","domain_error_schema":"schemas/directory-error.schema.json"},
+    {"name":"list_groups","interaction":"request","request_schema":"schemas/list-request.schema.json","response_schema":"schemas/group-list-response.schema.json","domain_error_schema":"schemas/directory-error.schema.json"},
+    {"name":"replace_group","interaction":"request","request_schema":"schemas/group-write-request.schema.json","response_schema":"schemas/group-response.schema.json","domain_error_schema":"schemas/directory-error.schema.json"},
+    {"name":"patch_group","interaction":"request","request_schema":"schemas/group-patch-request.schema.json","response_schema":"schemas/group-response.schema.json","domain_error_schema":"schemas/directory-error.schema.json"},
+    {"name":"delete_group","interaction":"request","request_schema":"schemas/delete-request.schema.json","response_schema":"schemas/mutation-response.schema.json","domain_error_schema":"schemas/directory-error.schema.json"},
+    {"name":"repair_sync","interaction":"request","request_schema":"schemas/repair-request.schema.json","response_schema":"schemas/repair-response.schema.json","domain_error_schema":"schemas/directory-error.schema.json"}
+  ]
+}

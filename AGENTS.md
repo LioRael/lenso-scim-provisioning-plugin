@@ -1,6 +1,6 @@
 # Repository instructions
 
-- Run Cargo through `/Users/leosouthey/Projects/framework/.lenso-tools/bin/lenso-cargo`.
+- Use the workspace-provided Cargo wrapper when one is available; otherwise use `cargo`.
 - Keep `capability.json`, JSON Schemas, and generated Rust projections exact.
 - Database migrations are operator-managed; Plugin activation must not apply DDL.
 - Never log bearer credentials, email values, Actor assertions, database URLs, or secret values.

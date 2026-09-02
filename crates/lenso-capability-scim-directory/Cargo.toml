@@ -1,6 +1,6 @@
 [package]
 name = "lenso-capability-scim-directory"
-version = "0.1.0"
+version = "0.1.1"
 description = "Portable SCIM Directory Capability contract for Lenso applications."
 edition.workspace = true
 license.workspace = true

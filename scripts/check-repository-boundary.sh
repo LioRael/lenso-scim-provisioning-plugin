@@ -29,24 +29,6 @@ if rg -n 'AccountAdmin|disable_account|global.*disable' crates --glob '!**/gener
   exit 1
 fi
 
-required_pins=(
-  b763a63adc20f1ccc9955e784c0d04c21489126b
-  b4a2f53df882ae51021aa3d5922d8ee41bf97c72
-  de1e1f1ec61232b13fc90a05f1cb4e3fc96ba420
-  d3fa8b27c3dea470fcbf72183a7cca1fc032a117
-  9572afd465ba2f952b646ec16935c0274f66c82a
-  c31aa142ff59b4536e2bf3e9785ccbb5bb5c0e6a
-  9769bc5dc828fd9111da6d28a4ecd5f1bb198ab4
-  cd35675a191d815b690c8889756dfe859a0e4d7b
-  525c1012c789e6f54c3c2fdaf8507a626c93e65f
-)
-for pin in "${required_pins[@]}"; do
-  if ! rg -q "$pin" Cargo.toml; then
-    echo "required exact Lenso dependency pin is missing: $pin" >&2
-    exit 1
-  fi
-done
-
 if find . -name .gitkeep -print -quit | rg -q .; then
   echo ".gitkeep placeholders are not allowed in the released repository" >&2
   exit 1

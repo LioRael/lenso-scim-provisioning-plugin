@@ -13,20 +13,19 @@ rust-version = "1.94"
 
 [workspace.dependencies]
 futures = "0.3"
-lenso = { version = "0.5.0", git = "https://github.com/LioRael/lenso-runtime-rust", rev = "b763a63adc20f1ccc9955e784c0d04c21489126b" }
-lenso-auth-sdk = { version = "0.2.1", git = "https://github.com/LioRael/lenso-auth-plugin", rev = "b4a2f53df882ae51021aa3d5922d8ee41bf97c72" }
-lenso-capability-access-control-admin = { version = "0.1.0", git = "https://github.com/LioRael/lenso-access-control-plugin", rev = "de1e1f1ec61232b13fc90a05f1cb4e3fc96ba420" }
-lenso-capability-access-control-directory = { version = "0.1.0", git = "https://github.com/LioRael/lenso-access-control-plugin", rev = "de1e1f1ec61232b13fc90a05f1cb4e3fc96ba420" }
-lenso-capability-auth = { version = "0.1.2", git = "https://github.com/LioRael/lenso-auth-plugin", rev = "b4a2f53df882ae51021aa3d5922d8ee41bf97c72" }
-lenso-capability-http-endpoint = { version = "0.2.7", git = "https://github.com/LioRael/lenso-web", rev = "d3fa8b27c3dea470fcbf72183a7cca1fc032a117" }
-lenso-capability-identity-directory = { version = "0.2.0", git = "https://github.com/LioRael/lenso-auth-plugin", rev = "b4a2f53df882ae51021aa3d5922d8ee41bf97c72" }
-lenso-capability-organization-membership-admin = { version = "0.1.0", git = "https://github.com/LioRael/lenso-organization-plugin", rev = "9572afd465ba2f952b646ec16935c0274f66c82a" }
-lenso-capability-secrets = { version = "0.1.1", git = "https://github.com/LioRael/lenso-secrets-plugin", rev = "c31aa142ff59b4536e2bf3e9785ccbb5bb5c0e6a" }
-lenso-contract-codegen = { version = "0.6.3", git = "https://github.com/LioRael/lenso-protocols", rev = "9769bc5dc828fd9111da6d28a4ecd5f1bb198ab4" }
-lenso-contract-runtime = { version = "0.1.3", git = "https://github.com/LioRael/lenso-protocols", rev = "9769bc5dc828fd9111da6d28a4ecd5f1bb198ab4" }
-lenso-kernel = { version = "0.2.0", git = "https://github.com/LioRael/lenso", rev = "cd35675a191d815b690c8889756dfe859a0e4d7b" }
-lenso-plugin-authoring = { version = "0.1.1", git = "https://github.com/LioRael/lenso-protocols", rev = "9769bc5dc828fd9111da6d28a4ecd5f1bb198ab4" }
-lenso-postgres-kit = { version = "0.1.0", git = "https://github.com/LioRael/lenso-postgres-kit", rev = "525c1012c789e6f54c3c2fdaf8507a626c93e65f" }
+lenso = { version = "0.5.0" }
+lenso-auth-sdk = { version = "0.2.1" }
+lenso-capability-access-control-admin = { version = "0.1.0" }
+lenso-capability-access-control-directory = { version = "0.1.0" }
+lenso-capability-auth = { version = "0.1.2" }
+lenso-capability-http-endpoint = { version = "0.2.7" }
+lenso-capability-identity-directory = { version = "0.2.0" }
+lenso-capability-organization-membership-admin = { version = "0.1.0" }
+lenso-capability-secrets = { version = "0.1.1" }
+lenso-contract-runtime = { version = "0.1.3" }
+lenso-kernel = { version = "0.2.0" }
+lenso-plugin-authoring = { version = "0.1.1" }
+lenso-postgres-kit = { version = "0.1.0" }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 sha2 = "0.10"
